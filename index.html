@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Product Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0ff;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:first-child {
+            background-color: #dc1434;
+            color: white;
+        }
+
+        .card:last-child {
+            background-color: #00bcd4;
+            color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .buy-now {
+            padding: 10px 20px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now:hover {
+            background-color: #333;
+        }
+
+        .favorite {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .favorite svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: #333;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .favorite:hover svg {
+            fill: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="DALL·E 2024-12-20 11.04.00 - A single Nike X OFF-white sneaker in red with black and white accents, styled in a modern design with signature text and unique laces, displayed on a .webp" alt="Nike X OFF-white Chicago" class="product-image">
+            <h2 class="product-title">Nike X OFF-white</h2>
+            <p class="product-description">The 10: Air Jordan 1 off-white - Chicago</p>
+            <p class="price">$999</p>
+            <div class="actions">
+                <button class="buy-now">Buy Now</button>
+                <button class="favorite">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="DALL·E 2024-12-20 11.03.55 - A single Nike X OFF-white sneaker in white with blue and white accents, styled in a modern design with signature text and unique laces, displayed on a.webp" alt="Nike X OFF-white UNC" class="product-image">
+            <h2 class="product-title">Nike X OFF-white</h2>
+            <p class="product-description">Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
+            <p class="price">$1599</p>
+            <div class="actions">
+                <button class="buy-now">Buy Now</button>
+                <button class="favorite">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
